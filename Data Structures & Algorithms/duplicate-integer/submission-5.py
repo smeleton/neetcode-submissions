@@ -1,0 +1,20 @@
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        #brute force solution
+        # for i in range(len(nums)):
+        #     for j in range(i+1, len(nums)):
+        #         if nums[i] == nums[j]:
+        #             return True
+        # return False
+        #Runtime exceeds brute force does not work on long input list
+        #time complexity: O(n^2)
+        #space complexity: O(1)
+
+        #optimal solution:
+        s = set(nums)
+        return len(s) != len(nums)
+        
+        
+
+        
+            
